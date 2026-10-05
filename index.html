@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkPulse — Link-in-Bio & Analytics Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h1>LinkPulse</h1>
+    <p>Custom Link-in-Bio & Real-Time Analytics Dashboard</p>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3>Total Active Links</h3>
+      <div class="val" id="totalLinks">0</div>
+    </div>
+    <div class="stat-card">
+      <h3>Total Link Clicks</h3>
+      <div class="val" id="totalClicks">0</div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- Admin Controls -->
+    <div>
+      <div class="card" style="margin-bottom: 20px;">
+        <h2>Add New Link</h2>
+        <form id="linkForm">
+          <div class="form-group">
+            <label>Link Title</label>
+            <input type="text" id="linkTitle" placeholder="e.g. Visit My Digital Store" required>
+          </div>
+          <div class="form-group">
+            <label>Destination URL</label>
+            <input type="url" id="linkUrl" placeholder="https://atoyebi8.gumroad.com" required>
+          </div>
+          <button type="submit">Add Link</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h2>Manage Links</h2>
+        <div id="manageList"></div>
+      </div>
+    </div>
+
+    <!-- Public Bio Preview -->
+    <div class="card">
+      <h2>Live Storefront Preview</h2>
+      <div class="preview-box">
+        <div class="avatar">AP</div>
+        <div class="profile-title">Ade Pulse</div>
+        <div class="profile-bio">Full-Stack Web Developer & Micro-SaaS Creator</div>
+        <div class="link-list" id="publicLinks"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
